@@ -7,9 +7,7 @@ Qubes OS 안의 리눅스 민트 qube에 `qubes-core-agent`를 설치해서 클�
 ### 1️⃣ GPG 키 가져오기
 
 ```bash
-curl -fsSL https://keys.qubes-os.org/keys/qubes-release-4-signing-key.asc \
-| gpg --dearmor \
-| sudo tee /usr/share/keyrings/qubes-archive-keyring.gpg > /dev/null
+curl -fsSL https://keys.qubes-os.org/keys/qubes-release-4-signing-key.asc | gpg --dearmor | sudo tee /usr/share/keyrings/qubes-archive-keyring.gpg > /dev/null
 ```
 
 ---
@@ -17,9 +15,7 @@ curl -fsSL https://keys.qubes-os.org/keys/qubes-release-4-signing-key.asc \
 ### 2️⃣ Qubes 패키지 저장소 추가
 
 ```bash
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/qubes-archive-keyring.gpg] \
-http://deb.qubes-os.org/r4.1/vm bullseye main" \
-| sudo tee /etc/apt/sources.list.d/qubes-vm.list
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/qubes-archive-keyring.gpg] http://deb.qubes-os.org/r4.1/vm bullseye main" | sudo tee /etc/apt/sources.list.d/qubes-vm.list
 ```
 
 ---
